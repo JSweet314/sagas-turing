@@ -3,10 +3,11 @@ import BoilerPlateView from './index';
 import { shallow } from 'enzyme';
 
 describe('BoilerPlateView', () => {
-  let wrapper, mockError, mockUser, mockHandleOnClick;
+  let wrapper, mockError, mockUser, mockHandleOnClick, mockHandleOnChange;
 
   beforeEach(() => {
     mockHandleOnClick = jest.fn();
+    mockHandleOnChange = jest.fn();
     mockUser = {
       login: 'jsweet314'
     };
@@ -14,6 +15,7 @@ describe('BoilerPlateView', () => {
     wrapper = shallow(
       <BoilerPlateView
         handleOnClick={mockHandleOnClick}
+        handleOnChange={mockHandleOnChange}
         user={mockUser}
         error={mockError}
       />

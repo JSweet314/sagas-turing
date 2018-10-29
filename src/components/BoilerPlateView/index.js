@@ -1,7 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const BoilerPlateView = ({ handleOnClick, user, error }) => (
+export const BoilerPlateView = ({
+  handleOnClick,
+  handleOnChange,
+  inputValue,
+  user,
+  error
+}) => (
   <div>
     <h1>React/Redux Boilerplate</h1>
     <p>Includes:</p>
@@ -44,14 +50,20 @@ export const BoilerPlateView = ({ handleOnClick, user, error }) => (
         Create-React-App
       </a>
     </p>
-    <button onClick={() => handleOnClick('jsweet314')}>Test Middleware</button>
-    <button onClick={() => handleOnClick('')}>Test Middleware Failure</button>
+    <input
+      value={inputValue}
+      onChange={event => handleOnChange(event)}
+      placeholder="GitHub Username"
+      name="inputValue"
+    />
+    <button onClick={event => handleOnClick(event)}>Test Middleware</button>
     <p>{error || user.login}</p>
   </div>
 );
 
 BoilerPlateView.propTypes = {
   handleOnClick: PropTypes.func.isRequired,
+  handleOnChange: PropTypes.func.isRequired,
   user: PropTypes.shape({
     login: PropTypes.string
   }).isRequired,

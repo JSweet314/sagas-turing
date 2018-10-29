@@ -5,6 +5,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Unknown
     error="Error - GitHub User Not Found"
+    handleOnChange={[Function]}
     handleOnClick={[Function]}
     user={
         Object {
@@ -84,15 +85,16 @@ ShallowWrapper {
                     Create-React-App
           </a>
 </p>,
+        <input
+          name="inputValue"
+          onChange={[Function]}
+          placeholder="GitHub Username"
+          value={undefined}
+/>,
         <button
           onClick={[Function]}
 >
           Test Middleware
-</button>,
-        <button
-          onClick={[Function]}
->
-          Test Middleware Failure
 </button>,
         <p>
           Error - GitHub User Not Found
@@ -335,23 +337,25 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Test Middleware",
-          "onClick": [Function],
+          "name": "inputValue",
+          "onChange": [Function],
+          "placeholder": "GitHub Username",
+          "value": undefined,
         },
         "ref": null,
-        "rendered": "Test Middleware",
-        "type": "button",
+        "rendered": null,
+        "type": "input",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Test Middleware Failure",
+          "children": "Test Middleware",
           "onClick": [Function],
         },
         "ref": null,
-        "rendered": "Test Middleware Failure",
+        "rendered": "Test Middleware",
         "type": "button",
       },
       Object {
@@ -433,15 +437,16 @@ ShallowWrapper {
                         Create-React-App
             </a>
 </p>,
+          <input
+            name="inputValue"
+            onChange={[Function]}
+            placeholder="GitHub Username"
+            value={undefined}
+/>,
           <button
             onClick={[Function]}
 >
             Test Middleware
-</button>,
-          <button
-            onClick={[Function]}
->
-            Test Middleware Failure
 </button>,
           <p>
             Error - GitHub User Not Found
@@ -684,23 +689,25 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Test Middleware",
-            "onClick": [Function],
+            "name": "inputValue",
+            "onChange": [Function],
+            "placeholder": "GitHub Username",
+            "value": undefined,
           },
           "ref": null,
-          "rendered": "Test Middleware",
-          "type": "button",
+          "rendered": null,
+          "type": "input",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Test Middleware Failure",
+            "children": "Test Middleware",
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": "Test Middleware Failure",
+          "rendered": "Test Middleware",
           "type": "button",
         },
         Object {
