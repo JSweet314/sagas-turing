@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getUserInfo } from '../../actions/';
+import * as actions from '../../actions/';
 import BoilerPlateView from '../../components/BoilerPlateView';
 
 export const BoilerPlateContainer = props => <BoilerPlateView {...props} />;
 
 export const mapDispatchToProps = dispatch => ({
-  testMiddleware: gitHubUsername => dispatch(getUserInfo(gitHubUsername))
+  handleOnClick: gitHubUsername => dispatch(actions.getUserInfo(gitHubUsername))
 });
 
 export const mapStateToProps = state => ({

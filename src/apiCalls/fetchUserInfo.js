@@ -1,6 +1,8 @@
-export const fetchUserInfo = async username => {
+export const fetchUserInfo = async gitHubUsername => {
   try {
-    const response = await fetch(`https://api.github.com/users/${username}`);
+    const response = await fetch(
+      `https://api.github.com/users/${gitHubUsername}`
+    );
     if (response.status < 300) {
       return await response.json();
     }

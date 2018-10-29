@@ -1,16 +1,10 @@
 import React from 'react';
 
-export const BoilerPlateView = ({ testMiddleware, user, error }) => (
+export const BoilerPlateView = ({ handleOnClick, user, error }) => (
   <div>
     <h1>React Boilerplate</h1>
     <p>Includes:</p>
     <ul>
-      <a
-        href="https://github.com/ReactTraining/react-router"
-        target="_blank"
-        rel="noopener noreferrer">
-        <li>React-Router</li>
-      </a>
       <a
         href="https://github.com/reduxjs/redux"
         target="_blank"
@@ -49,8 +43,8 @@ export const BoilerPlateView = ({ testMiddleware, user, error }) => (
         Create-React-App
       </a>
     </p>
-    <button onClick={() => testMiddleware('jsweet314')}>Test Middleware</button>
-    <button onClick={() => testMiddleware('')}>Test Middleware Failure</button>
+    <button onClick={() => handleOnClick('jsweet314')}>Test Middleware</button>
+    <button onClick={() => handleOnClick('')}>Test Middleware Failure</button>
     <p>{error || user.login}</p>
   </div>
 );
