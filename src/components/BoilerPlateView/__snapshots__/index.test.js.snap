@@ -5,7 +5,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Unknown
     error="Error - GitHub User Not Found"
-    testMiddleware={[Function]}
+    handleOnClick={[Function]}
     user={
         Object {
             "login": "jsweet314",
@@ -27,21 +27,12 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <h1>
-          React Boilerplate
+          React/Redux Boilerplate
 </h1>,
         <p>
           Includes:
 </p>,
         <ul>
-          <a
-                    href="https://github.com/ReactTraining/react-router"
-                    rel="noopener noreferrer"
-                    target="_blank"
-          >
-                    <li>
-                              React-Router
-                    </li>
-          </a>
           <a
                     href="https://github.com/reduxjs/redux"
                     rel="noopener noreferrer"
@@ -115,10 +106,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "React Boilerplate",
+          "children": "React/Redux Boilerplate",
         },
         "ref": null,
-        "rendered": "React Boilerplate",
+        "rendered": "React/Redux Boilerplate",
         "type": "h1",
       },
       Object {
@@ -138,15 +129,6 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <a
-              href="https://github.com/ReactTraining/react-router"
-              rel="noopener noreferrer"
-              target="_blank"
->
-              <li>
-                            React-Router
-              </li>
-</a>,
             <a
               href="https://github.com/reduxjs/redux"
               rel="noopener noreferrer"
@@ -190,32 +172,6 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <li>
-                React-Router
-</li>,
-              "href": "https://github.com/ReactTraining/react-router",
-              "rel": "noopener noreferrer",
-              "target": "_blank",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "React-Router",
-              },
-              "ref": null,
-              "rendered": "React-Router",
-              "type": "li",
-            },
-            "type": "a",
-          },
           Object {
             "instance": null,
             "key": undefined,
@@ -420,21 +376,12 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h1>
-            React Boilerplate
+            React/Redux Boilerplate
 </h1>,
           <p>
             Includes:
 </p>,
           <ul>
-            <a
-                        href="https://github.com/ReactTraining/react-router"
-                        rel="noopener noreferrer"
-                        target="_blank"
-            >
-                        <li>
-                                    React-Router
-                        </li>
-            </a>
             <a
                         href="https://github.com/reduxjs/redux"
                         rel="noopener noreferrer"
@@ -508,10 +455,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "React Boilerplate",
+            "children": "React/Redux Boilerplate",
           },
           "ref": null,
-          "rendered": "React Boilerplate",
+          "rendered": "React/Redux Boilerplate",
           "type": "h1",
         },
         Object {
@@ -531,15 +478,6 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <a
-                href="https://github.com/ReactTraining/react-router"
-                rel="noopener noreferrer"
-                target="_blank"
->
-                <li>
-                                React-Router
-                </li>
-</a>,
               <a
                 href="https://github.com/reduxjs/redux"
                 rel="noopener noreferrer"
@@ -583,32 +521,6 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <li>
-                  React-Router
-</li>,
-                "href": "https://github.com/ReactTraining/react-router",
-                "rel": "noopener noreferrer",
-                "target": "_blank",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "React-Router",
-                },
-                "ref": null,
-                "rendered": "React-Router",
-                "type": "li",
-              },
-              "type": "a",
-            },
             Object {
               "instance": null,
               "key": undefined,

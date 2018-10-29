@@ -4,6 +4,5 @@
 
 Includes:
 
-React-Router,
 Redux, and
 testing w/ Jest + Enzyme.

@@ -1,19 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import {
-  BoilerPlateContainer,
-  mapDispatchToProps,
-  mapStateToProps
-} from './index';
+import { mapDispatchToProps, mapStateToProps } from './index';
 import * as actions from '../../actions';
 
 describe('mapDispatchToProps', () => {
   const mockDispatch = jest.fn();
 
-  it('should map an action getUserInfo to testMiddleware', () => {
+  it('should map an action getUserInfo to handleOnClick', () => {
     const mapped = mapDispatchToProps(mockDispatch);
     const mockUsername = 'jsweet314';
-    mapped.testMiddleware(mockUsername);
+    mapped.handleOnClick(mockUsername);
     expect(mockDispatch).toHaveBeenCalledWith(
       actions.getUserInfo(mockUsername)
     );

@@ -3,17 +3,17 @@ import BoilerPlateView from './index';
 import { shallow } from 'enzyme';
 
 describe('BoilerPlateView', () => {
-  let wrapper, mockError, mockUser, mockTestMiddleware;
+  let wrapper, mockError, mockUser, mockHandleOnClick;
 
   beforeEach(() => {
-    mockTestMiddleware = jest.fn();
+    mockHandleOnClick = jest.fn();
     mockUser = {
       login: 'jsweet314'
     };
     mockError = 'Error - GitHub User Not Found';
     wrapper = shallow(
       <BoilerPlateView
-        testMiddleware={mockTestMiddleware}
+        handleOnClick={mockHandleOnClick}
         user={mockUser}
         error={mockError}
       />

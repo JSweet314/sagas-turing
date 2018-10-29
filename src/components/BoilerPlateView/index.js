@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const BoilerPlateView = ({ handleOnClick, user, error }) => (
   <div>
-    <h1>React Boilerplate</h1>
+    <h1>React/Redux Boilerplate</h1>
     <p>Includes:</p>
     <ul>
       <a
@@ -48,5 +49,13 @@ export const BoilerPlateView = ({ handleOnClick, user, error }) => (
     <p>{error || user.login}</p>
   </div>
 );
+
+BoilerPlateView.propTypes = {
+  handleOnClick: PropTypes.func.isRequired,
+  user: PropTypes.shape({
+    login: PropTypes.string
+  }).isRequired,
+  error: PropTypes.string
+};
 
 export default BoilerPlateView;
