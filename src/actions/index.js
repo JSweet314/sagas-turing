@@ -1,6 +1,3 @@
-// Root file for actions
-// Write actions in here directly or import from separate files.
-
 export const exampleSuccessAction = payload => ({
   type: 'EXAMPLE_SUCCESS_ACTION',
   payload
