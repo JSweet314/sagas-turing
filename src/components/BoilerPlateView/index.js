@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import {func, string, shape } from 'prop-types';
 
 export const BoilerPlateView = ({
   handleOnClick,
@@ -62,12 +62,12 @@ export const BoilerPlateView = ({
 );
 
 BoilerPlateView.propTypes = {
-  handleOnClick: PropTypes.func.isRequired,
-  handleOnChange: PropTypes.func.isRequired,
-  user: PropTypes.shape({
-    login: PropTypes.string
+  handleOnClick: func.isRequired,
+  handleOnChange: func.isRequired,
+  user: shape({
+    login: string
   }).isRequired,
-  error: PropTypes.string
+  error: string
 };
 
 export default BoilerPlateView;

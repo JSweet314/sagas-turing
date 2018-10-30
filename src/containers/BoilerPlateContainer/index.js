@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import { func, string, shape } from 'prop-types';
 import * as actions from '../../actions/';
 import BoilerPlateView from '../../components/BoilerPlateView';
 
 export class BoilerPlateContainer extends Component {
   static propTypes = {
-    testMiddleware: PropTypes.func.isRequired,
-    user: PropTypes.shape({
-      login: PropTypes.string
+    testMiddleware: func.isRequired,
+    user: shape({
+      login: string
     }).isRequired,
-    error: PropTypes.string
+    error: string
   };
 
   state = {
