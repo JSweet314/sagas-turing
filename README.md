@@ -67,7 +67,7 @@ export default rootSaga;
 5. Start writing sagas! Here is the common pattern:
 
 ```
-// src/sagas/mySaga.js
+// src/sagas/getUserSaga.js
 
 import { call, put, takeEvery, takeLatest } from 'redux-saga/effects'
 import { fetchUserInfo } from '../apiCalls';
@@ -93,11 +93,11 @@ export function* asyncProcedure(action) {
 // src/sagas/index.js
 
 import { all } from 'redux-saga/effects';
-import { mySaga } from './mySaga.js
+import { getUserSaga } from './getUserSaga.js
 
 export function* rootSaga() {
   yield all([
-    mySaga()
+    getUserSaga()
   ]);
 }
 
@@ -109,7 +109,7 @@ export default rootSaga;
 Easy to test listening sagas
 
 ```
-// src/sagas/mySaga.test.js
+// src/sagas/getUserSaga.test.js
 
 import { put, call, takeLatest } from 'redux-saga/effects';
 import * as actions from '../actions';
