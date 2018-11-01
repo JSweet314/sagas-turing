@@ -1,5 +1,6 @@
-import { takeLatest, call, put } from 'redux-saga/effects';
-import { fetchUserInfo } from '../apiCalls/fetchUserInfo.js';
+import {takeLatest, call, put } from 'redux-saga/effects';
+import {fetchUserInfo} from '../apiCalls';
+import {getHackerStories} from './getHackerStories.js';
 import * as actions from '../actions';
 
 export function* listenForGetUser() {
@@ -8,8 +9,9 @@ export function* listenForGetUser() {
 
 export function* getUserSaga(action) {
   try {
-    const response = yield call(fetchUserInfo, action.payload);
-    yield put(actions.exampleSuccessAction(response));
+		const response = yield call(fetchUserInfo, action.payload);
+		const stories = yield call(getHackerStories);
+    yield put(actions.exampleSuccessAction({...response, stories}));
   } catch (error) {
     yield put(actions.exampleFailureAction(error.message));
   }

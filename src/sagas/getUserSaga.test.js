@@ -2,6 +2,7 @@ import { listenForGetUser, getUserSaga } from './getUserSaga';
 import * as actions from '../actions';
 import { fetchUserInfo } from '../apiCalls/fetchUserInfo';
 import { takeLatest, call, put } from 'redux-saga/effects';
+import {getHackerStories} from './getHackerStories.js';
 
 describe('listenForGetUser', () => {
   let generator;
@@ -28,11 +29,16 @@ describe('getUserSaga', () => {
   });
   it('should call an api', () => {
     expect(generator.next().value).toEqual(call(fetchUserInfo, 'jsweet314'));
-  });
+	});
+
+	it('should invoke the getHackerStories saga', () => {
+		const expected = call(getHackerStories);
+		expect(generator.next({ username: 'jsweet314' }).value).toEqual(expected);
+	});
 
   it('should put an action on the stack', () => {
-    expect(generator.next({ username: 'jsweet314' }).value).toEqual(
-      put(actions.exampleSuccessAction({ username: 'jsweet314' }))
+    expect(generator.next([{}]).value).toEqual(
+      put(actions.exampleSuccessAction({username: 'jsweet314', stories: [{}]}))
     );
   });
 
