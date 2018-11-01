@@ -31,7 +31,7 @@ describe('fetchUserInfo', () => {
         ok: false
       })
     );
-    const expected = new Error('Error - GitHub User Not Found');
+    const expected = new Error('fetchUser error: GitHub User Not Found - status 500');
     await expect(fetchUserInfo('NonexistentUser')).rejects.toEqual(expected);
   });
 });
