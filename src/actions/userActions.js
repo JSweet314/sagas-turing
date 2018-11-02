@@ -1,14 +1,14 @@
 export const getUserInfo = gitHubUsername => ({
   type: 'GET_USER_INFO',
-  payload: gitHubUsername
+  payload: gitHubUsername,
 });
 
-export const exampleSuccessAction = payload => ({
-  type: 'EXAMPLE_SUCCESS_ACTION',
-  payload
+export const userInfoSuccess = payload => ({
+  type: 'USER_INFO_SUCCESS',
+  payload,
 });
 
-export const exampleFailureAction = payload => ({
-  type: 'EXAMPLE_FAILURE_ACTION',
-  payload
+export const userInfoFailure = payload => ({
+  type: 'USER_INFO_FAILURE',
+  payload,
 });

@@ -1,12 +1,13 @@
 import React from 'react';
-import {func, string, shape } from 'prop-types';
+import {func, string, shape, arrayOf} from 'prop-types';
 
 export const BoilerPlateView = ({
   handleOnClick,
   handleOnChange,
   inputValue,
   user,
-  error
+  error,
+  headlines,
 }) => (
   <div>
     <h1>React/Redux Boilerplate</h1>
@@ -58,6 +59,14 @@ export const BoilerPlateView = ({
     />
     <button onClick={event => handleOnClick(event)}>Test Middleware</button>
     <p>{error || user.login}</p>
+    <ul>
+      {Array.isArray(headlines) &&
+        headlines.map((headline, index) => (
+          <li key={`${headline.title}-${index}`}>
+            <a href={headline.url}>{headline.title}</a>
+          </li>
+        ))}
+    </ul>
   </div>
 );
 
@@ -65,9 +74,10 @@ BoilerPlateView.propTypes = {
   handleOnClick: func.isRequired,
   handleOnChange: func.isRequired,
   user: shape({
-    login: string
+    login: string,
   }).isRequired,
-  error: string
+  error: string,
+  headlines: arrayOf(shape({title: string, url: string})),
 };
 
 export default BoilerPlateView;

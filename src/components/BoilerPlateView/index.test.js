@@ -1,6 +1,6 @@
 import React from 'react';
 import BoilerPlateView from './index';
-import { shallow } from 'enzyme';
+import {shallow} from 'enzyme';
 
 describe('BoilerPlateView', () => {
   let wrapper, mockError, mockUser, mockHandleOnClick, mockHandleOnChange;
@@ -9,7 +9,7 @@ describe('BoilerPlateView', () => {
     mockHandleOnClick = jest.fn();
     mockHandleOnChange = jest.fn();
     mockUser = {
-      login: 'jsweet314'
+      login: 'jsweet314',
     };
     mockError = 'Error - GitHub User Not Found';
     wrapper = shallow(
@@ -18,7 +18,13 @@ describe('BoilerPlateView', () => {
         handleOnChange={mockHandleOnChange}
         user={mockUser}
         error={mockError}
-      />
+        headlines={[
+          {
+            title: 'Switzerland invades france',
+            url: 'fakenews.com',
+          },
+        ]}
+      />,
     );
   });
 

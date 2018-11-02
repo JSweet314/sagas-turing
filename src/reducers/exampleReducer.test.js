@@ -1,4 +1,4 @@
-import { exampleReducer } from './exampleReducer';
+import {exampleReducer} from './exampleReducer';
 import * as actions from '../actions';
 
 describe('exampleReducer', () => {
@@ -7,15 +7,15 @@ describe('exampleReducer', () => {
   });
 
   it('should store a successful payload', () => {
-    const mockAction = actions.exampleSuccessAction('Woo Hoo!');
+    const mockAction = actions.userInfoSuccess('Woo Hoo!');
     expect(exampleReducer(undefined, mockAction)).toEqual('Woo Hoo!');
   });
 
   it('should return an error object on failure', () => {
-    const mockAction = actions.exampleFailureAction('error message');
+    const mockAction = actions.userInfoFailure('error message');
 
     expect(exampleReducer(undefined, mockAction)).toEqual({
-      error: 'error message'
+      error: 'error message',
     });
   });
 });

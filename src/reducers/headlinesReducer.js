@@ -1,8 +1,8 @@
-export const exampleReducer = (state = {}, action) => {
+export const headlinesReducer = (state = [], action) => {
   switch (action.type) {
-    case 'USER_INFO_SUCCESS':
+    case 'HEADLINE_SUCCESS':
       return action.payload;
-    case 'USER_INFO_FAILURE':
+    case 'HEADLINE_FAILURE':
       return {error: action.payload};
     default:
       return state;

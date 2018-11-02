@@ -1,5 +1,3 @@
-export {
-  exampleSuccessAction,
-  exampleFailureAction,
-  getUserInfo
-} from './userActions';
+export {userInfoSuccess, userInfoFailure, getUserInfo} from './userActions';
+
+export {headlineSuccess, headlineFailure} from './headlineActions.js';

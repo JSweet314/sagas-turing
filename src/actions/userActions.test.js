@@ -1,37 +1,33 @@
-import {
-  exampleSuccessAction,
-  exampleFailureAction,
-  getUserInfo
-} from './userActions';
+import {userInfoSuccess, userInfoFailure, getUserInfo} from './userActions';
 
 describe('Actions', () => {
   describe('getUserInfo', () => {
     it('should return an action object of type "GET_USER_INFO"', () => {
       const expected = {
         type: 'GET_USER_INFO',
-        payload: 'username'
+        payload: 'username',
       };
       expect(getUserInfo('username')).toEqual(expected);
     });
   });
 
-  describe('exampleSuccessAction', () => {
-    it('should return an action object of type "EXAMPLE_SUCCESS_ACTION"', () => {
+  describe('userInfoSuccess', () => {
+    it('should return an action object of type "USER_INFO_SUCCESS"', () => {
       const expected = {
-        type: 'EXAMPLE_SUCCESS_ACTION',
-        payload: 'test'
+        type: 'USER_INFO_SUCCESS',
+        payload: 'test',
       };
-      expect(exampleSuccessAction('test')).toEqual(expected);
+      expect(userInfoSuccess('test')).toEqual(expected);
     });
   });
 
-  describe('exampleFailureAction', () => {
-    it('should return an action object of type "EXAMPLE_FAILURE_ACTION"', () => {
+  describe('userInfoFailure', () => {
+    it('should return an action object of type "USER_INFO_FAILURE"', () => {
       const expected = {
-        type: 'EXAMPLE_FAILURE_ACTION',
-        payload: 'test'
+        type: 'USER_INFO_FAILURE',
+        payload: 'test',
       };
-      expect(exampleFailureAction('test')).toEqual(expected);
+      expect(userInfoFailure('test')).toEqual(expected);
     });
   });
 });

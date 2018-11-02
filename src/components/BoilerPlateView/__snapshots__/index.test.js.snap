@@ -7,6 +7,14 @@ ShallowWrapper {
     error="Error - GitHub User Not Found"
     handleOnChange={[Function]}
     handleOnClick={[Function]}
+    headlines={
+        Array [
+            Object {
+              "title": "Switzerland invades france",
+              "url": "fakenews.com",
+            },
+          ]
+    }
     user={
         Object {
             "login": "jsweet314",
@@ -99,6 +107,15 @@ ShallowWrapper {
         <p>
           Error - GitHub User Not Found
 </p>,
+        <ul>
+          <li>
+                    <a
+                              href="fakenews.com"
+                    >
+                              Switzerland invades france
+                    </a>
+          </li>
+</ul>,
       ],
     },
     "ref": null,
@@ -369,6 +386,52 @@ ShallowWrapper {
         "rendered": "Error - GitHub User Not Found",
         "type": "p",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li>
+              <a
+                            href="fakenews.com"
+              >
+                            Switzerland invades france
+              </a>
+</li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "Switzerland invades france-0",
+            "nodeType": "host",
+            "props": Object {
+              "children": <a
+                href="fakenews.com"
+>
+                Switzerland invades france
+</a>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Switzerland invades france",
+                "href": "fakenews.com",
+              },
+              "ref": null,
+              "rendered": "Switzerland invades france",
+              "type": "a",
+            },
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
     ],
     "type": "div",
   },
@@ -451,6 +514,15 @@ ShallowWrapper {
           <p>
             Error - GitHub User Not Found
 </p>,
+          <ul>
+            <li>
+                        <a
+                                    href="fakenews.com"
+                        >
+                                    Switzerland invades france
+                        </a>
+            </li>
+</ul>,
         ],
       },
       "ref": null,
@@ -720,6 +792,52 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Error - GitHub User Not Found",
           "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li>
+                <a
+                                href="fakenews.com"
+                >
+                                Switzerland invades france
+                </a>
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "Switzerland invades france-0",
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  href="fakenews.com"
+>
+                  Switzerland invades france
+</a>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Switzerland invades france",
+                  "href": "fakenews.com",
+                },
+                "ref": null,
+                "rendered": "Switzerland invades france",
+                "type": "a",
+              },
+              "type": "li",
+            },
+          ],
+          "type": "ul",
         },
       ],
       "type": "div",

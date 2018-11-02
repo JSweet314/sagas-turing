@@ -28,12 +28,13 @@ export class BoilerPlateContainer extends Component {
   };
 
   render() {
-    const { user, error } = this.props;
+    const { user, error, headlines } = this.props;
 
     return (
       <BoilerPlateView
         user={user}
-        error={error}
+				error={error}
+				headlines={headlines}
         {...this.state}
         handleOnClick={this.handleOnClick}
         handleOnChange={this.handleOnChange}
@@ -48,7 +49,8 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 export const mapStateToProps = state => ({
-  user: state.user,
+	user: state.user,
+	headlines: state.headlines,
   error: state.user.error
 });
 

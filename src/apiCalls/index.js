@@ -1,2 +1,2 @@
 export {fetchUserInfo} from './fetchUserInfo';
-export {fetchHackerNews, fetchHackerStory} from './fetchHackerNews.js';
+export {fetchHackerNewsList, fetchHackerNewsStory} from './fetchHackerNews.js';
